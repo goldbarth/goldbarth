@@ -35,7 +35,7 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 
 | Feature | Last Commit Message | Last Updated |
 |---------|----------------------|--------------|
-| feat: Add initial Unreal project using Top-Down template | 2 hours ago |
+| Add initial Unreal project using Top-Down template | 2 hours ago |
 <!-- END_RECENTLY_WORKED_ON -->
 
 ---
