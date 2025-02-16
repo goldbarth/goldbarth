@@ -24,6 +24,19 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 
 ---
 
+## 🎮 Most Recent Project
+
+### **🌌 The Obsidian Codex: Secrets of the Abyssal Archives (Unreal Engine C++)**  
+📝 **Description:** A dark, atmospheric mini RPG set in the depths of an ancient dungeon.     
+🔗 **[View on GitHub](https://github.com/goldbarth/TheObsidianCodex)**  
+
+## 🔄 Recently Worked On  
+<!-- START_RECENTLY_WORKED_ON -->
+
+<!-- END_RECENTLY_WORKED_ON -->
+
+---
+
 ## 💻 Tech Stack  
 🚀 **Languages & Engines:**  
 🎮 C# | C++ | Unity | Unreal Engine | .NET/WPF  
