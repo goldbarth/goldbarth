@@ -30,7 +30,6 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 📝 **Description:** A dark, atmospheric mini RPG set in the depths of an ancient dungeon.     
 🔗 **[View on GitHub](https://github.com/goldbarth/TheObsidianCodex)**  
 
-## 🔄 Recently Worked On  
 <!-- START_RECENTLY_WORKED_ON -->
 
 <!-- END_RECENTLY_WORKED_ON -->
