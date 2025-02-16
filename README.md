@@ -4,16 +4,6 @@
 🎮 **Specializing in Unity & Unreal Engine**  
 📍 Based in Hamburg, Germany  
 
-## 🚀 Featured Projects  
-🎥 *Click to view projects in action!*  
-
-👷 **Under Construction**
-| Solar System Simulation | Edge of Sorrow | 3D Model Viewer |
-|----------------------|----------------|----------------|
-| ![Solar System Gif](.images/solar-system-camera-pan.gif) | ![Edge of Sorrow Gif](.images/edge-of-sorrow-gameplay.gif) | ![3D Viewer Gif](.images/3d-model-viewer-backpack.gif) |
-
-🚧 **Under Construction**
-
 ## 🔥 About Me  
 I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools, performance optimization, and graphics programming**. My main focus is **C++ & Unreal Engine**, but I also work with **C#, Unity, and WPF**.  
 
@@ -58,32 +48,35 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 
 ---
 
-## 🎮 Notable Projects  
+## 🎮 Notable Projects   
+🎥 *Click to view projects in action!*  
 
+| 🌌 Solar System | 💀 Edge of Sorrow | 🪐 Nebula Forge | 🧊 3D Model Viewer |
+|------------------|----------------|--------------|------------------|
+| [![Solar System Gif](./images/solar-system-camera-pan.gif)](#solar-system-simulation) | [![Edge of Sorrow Gif](./images/edge-of-sorrow-gameplay.gif)](#edge-of-sorrow) | [![Edge of Sorrow Gif](./images/nebula-forge-tool.gif)](#nebula-forge) | [![3D Viewer Gif](./images/3d-model-viewer-backpack.gif)](#3d-model-viewer) |
+
+<a id="solar-system-simulation"></a>
 ### **🌌 Solar System Simulation (Unreal Engine C++)**  
 📝 **Description:** A fully documented, physics-driven solar system simulation using **C++ & Unreal Engine**. Features dynamic gravity, planetary orbits, and interactive adjustments.  
 🔗 **[View on GitHub](https://github.com/goldbarth/SolarSystem)**  
 
-🚧 **Under Construction**   
-![Solar System](link-zu-bild)  
-
 ---
 
+<a id="edge-of-sorrow"></a>
 ### **💀 Edge of Sorrow (Unreal Engine C++)**  
 ⚡ **Description:** A fast-paced **retro FPS**, blending speed, skill, and action-packed gameplay.  
 🔗 **[View on GitHub](https://github.com/goldbarth/EdgeOfSorrow)**  
 
-🚧 **Under Construction**   
-![Edge of Sorrow](link-zu-bild)  
-
 ---
 
+<a id="nebula-forge"></a>
 ### **🪐 Nebula Forge (Unity Engine C#)**
 ⚡ **Description:** A solar system simulator where you can change the laws of physics and watch the consequences unfold. It's also a project to learn about engine tools and performance optimization.   
 🔗 **[View on GitHub](https://github.com/goldbarth/NebulaForge)**
 
 ---
 
+<a id="3d-model-viewer"></a>
 ### **🧊 3D Model Viewer (OpenGL C++)**  
 ⚡ **Description:** A model viewer to load OBJ´s for a basic graphics programming introduction.   
 🔗 **[View on GitHub](https://github.com/goldbarth/3DModelViewer)**
