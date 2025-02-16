@@ -10,7 +10,7 @@
 👷 **Under Construction**
 | Solar System Simulation | Edge of Sorrow | 3D Model Viewer |
 |----------------------|----------------|----------------|
-| ![Solar System](link-zu-gif) | ![Edge of Sorrow](link-zu-gif) | ![3D Viewer](link-zu-gif) |
+| ![Solar System Gif](.images/solar-system-camera-pan.gif) | ![Edge of Sorrow Gif](.images/edge-of-sorrow-gameplay.gif) | ![3D Viewer Gif](.images/3d-model-viewer-backpack.gif) |
 
 🚧 **Under Construction**
 
