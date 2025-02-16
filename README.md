@@ -32,11 +32,16 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 
 ## 💻 Tech Stack  
 🚀 **Languages & Engines:**  
-🎮 C# | C++ | Unity | Unreal Engine | .NET/WPF  
+- [![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#)  
+- [![C#](https://custom-icon-badges.demolab.com/badge/C%23-%23239120.svg?logo=cshrp&logoColor=white)](#) [![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff)](#)  
+- [![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-%23313131.svg?logo=unrealengine&logoColor=white)](#) 
+- [![Unity](https://img.shields.io/badge/Unity-%23000000.svg?logo=unity&logoColor=white)](#)  
 
 🛠 **Development Tools:**  
-💡 Rider | Visual Studio | Git | CMake  
-
+- [![Rider](https://img.shields.io/badge/Rider-000?logo=rider&logoColor=fff)](#)
+- [![Visual Studio](https://custom-icon-badges.demolab.com/badge/Visual%20Studio-5C2D91.svg?&logo=visual-studio&logoColor=white)](#)  
+- [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)  
+- [![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)](#)
 ---
 
 ## 🎯 Core Competencies  
@@ -49,11 +54,13 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 ---
 
 ## 🎮 Notable Projects   
-🎥 *Click to view projects in action!*  
+🎥 *Click a preview to see project details!*  
 
 | 🌌 Solar System | 💀 Edge of Sorrow | 🪐 Nebula Forge | 🧊 3D Model Viewer |
 |------------------|----------------|--------------|------------------|
 | [![Solar System Gif](./images/solar-system-camera-pan.gif)](#solar-system-simulation) | [![Edge of Sorrow Gif](./images/edge-of-sorrow-gameplay.gif)](#edge-of-sorrow) | [![Edge of Sorrow Gif](./images/nebula-forge-tool.gif)](#nebula-forge) | [![3D Viewer Gif](./images/3d-model-viewer-backpack.gif)](#3d-model-viewer) |
+
+---
 
 <a id="solar-system-simulation"></a>
 ### **🌌 Solar System Simulation (Unreal Engine C++)**  
