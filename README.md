@@ -10,7 +10,7 @@
 <p align="center">🎮 <b>Specializing in Unity & Unreal Engine</b></p>
 <p align="center">📍 Based in Hamburg, Germany</p> 
 
-<h3 align="center">🔥 About Me</h3>
+<h3 align="center">About Me</h3>
 <p align="center">I'm <b>Felix Wahl</b>, a passionate game programmer specializing in <b>engine tools, performance optimization, and graphics programming</b>. My main focus is <b>C++ & Unreal Engine</b>, but I also work with <b>C#, Unity, and WPF</b>.</p> 
 
 <p align="center">🔭 <b>Currently looking for:</b></p> 
