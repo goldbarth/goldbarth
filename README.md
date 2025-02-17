@@ -1,16 +1,22 @@
-# Hi! I'm Felix 👋
+<div align="right">
+  Get in touch: 
+  <a href="https://www.linkedin.com/in/felix-wahl-6763791b9/">
+    <img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff" align="absmiddle" alt="LinkedIn Badge">
+  </a>
+</div>
 
-🌍 **Game Programmer | Engine Tools | Performance Optimization**  
-🎮 **Specializing in Unity & Unreal Engine**  
-📍 Based in Hamburg, Germany  
+<h1 align="center">Hi! I'm Felix 👋</h1> 
+<p align="center">🌍 <b>Game Programmer | Engine Tools | Performance Optimization</b></p>
+<p align="center">🎮 <b>Specializing in Unity & Unreal Engine</b></p>
+<p align="center">📍 Based in Hamburg, Germany</p> 
 
-## 🔥 About Me  
-I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools, performance optimization, and graphics programming**. My main focus is **C++ & Unreal Engine**, but I also work with **C#, Unity, and WPF**.  
+<h3 align="center">🔥 About Me</h3>
+<p align="center">I'm <b>Felix Wahl</b>, a passionate game programmer specializing in <b>engine tools, performance optimization, and graphics programming</b>. My main focus is <b>C++ & Unreal Engine</b>, but I also work with <b>C#, Unity, and WPF</b>.</p> 
 
-🔹 **Currently looking for:**  
-✅ New challenges as a **Unity or Unreal Developer / Tools Engineer**  
-✅ Exciting team collaborations  
-✅ Deepening my **C++ & Unreal Engine expertise**  
+<p align="center">🔭 <b>Currently looking for:</b></p> 
+<p align="center">✅ New challenges as a <b>Unity or Unreal Developer / Tools Engineer</b></p> 
+<p align="center">✅ Deepening my <b>C++ & Unreal Engine expertise</b></p> 
+<p align="center">✅ Exciting team collaborations</p> 
 
 ---
 
@@ -21,12 +27,21 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 🔗 **[View on GitHub](https://github.com/goldbarth/TheObsidianCodex)**  
 
 <!-- START_RECENTLY_WORKED_ON -->
-**🔄 Recently Worked On**
+## 🔄 Recently Worked On
 
 | Feature | Last Commit Message | Last Updated |
 |---------|----------------------|--------------|
-| Add initial Unreal project using Top-Down template | 7 hours ago |
+| Add initial Unreal project using Top-Down template | 4 hours ago |
 <!-- END_RECENTLY_WORKED_ON -->
+
+---
+
+## 🎮 Notable Projects   
+🎥 *Click a preview to see project details!*  
+
+| 🌌 Solar System | 💀 Edge of Sorrow | 🪐 Nebula Forge | 🧊 3D Model Viewer |
+|------------------|----------------|--------------|------------------|
+| [![Solar System Gif](./images/solar-system-camera-pan.gif)](#solar-system-simulation) | [![Edge of Sorrow Gif](./images/edge-of-sorrow-gameplay.gif)](#edge-of-sorrow) | [![Edge of Sorrow Gif](./images/nebula-forge-tool.gif)](#nebula-forge) | [![3D Viewer Gif](./images/3d-model-viewer-backpack.gif)](#3d-model-viewer) |
 
 ---
 
@@ -53,14 +68,7 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 
 ---
 
-## 🎮 Notable Projects   
-🎥 *Click a preview to see project details!*  
-
-| 🌌 Solar System | 💀 Edge of Sorrow | 🪐 Nebula Forge | 🧊 3D Model Viewer |
-|------------------|----------------|--------------|------------------|
-| [![Solar System Gif](./images/solar-system-camera-pan.gif)](#solar-system-simulation) | [![Edge of Sorrow Gif](./images/edge-of-sorrow-gameplay.gif)](#edge-of-sorrow) | [![Edge of Sorrow Gif](./images/nebula-forge-tool.gif)](#nebula-forge) | [![3D Viewer Gif](./images/3d-model-viewer-backpack.gif)](#3d-model-viewer) |
-
----
+## 🎮 Projects   
 
 <a id="solar-system-simulation"></a>
 ### **🌌 Solar System Simulation (Unreal Engine C++)**  
@@ -91,10 +99,10 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 ---
 
 ## 📫 Connect with Me  
-🔗 [Portfolio Page](https://goldbarth.github.io/Portfolio/#/)  
-🔗 [LinkedIn](https://www.linkedin.com/in/felix-wahl-6763791b9/)  
-🔗 [Itch.io](https://goldbarth.itch.io/)  
-📩 [Email Me](mailto:felix.wahl@live.de)  
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?logo=github&logoColor=white)](https://goldbarth.github.io/Portfolio/#/)  
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](https://www.linkedin.com/in/felix-wahl-6763791b9/)  
+[![Itch.io](https://img.shields.io/badge/itch.io-%23FF0B34.svg?logo=Itch.io&logoColor=white)](https://goldbarth.itch.io/)  
+[<kbd>E-Mail</kbd>](mailto:felix.wahl@live.de)  
 
 ---
 
