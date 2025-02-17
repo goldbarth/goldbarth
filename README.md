@@ -27,12 +27,12 @@
 🔗 **[View on GitHub](https://github.com/goldbarth/TheObsidianCodex)**  
 
 <!-- START_RECENTLY_WORKED_ON -->
-### **🔄 Recently Worked On**
+### 🔄 Recently Worked On
 
 | Feature | Last Updated | Workflow Updated |
 |---------|--------------|------------------|
-| Add Multilingual Game Desingn Documents | 16 minutes ago | Last workflow run: 2025-02-17 20:51:39 |
-| Add initial Unreal project using Top-Down template | 28 hours ago | Last workflow run: 2025-02-17 20:51:39 |
+| Add Multilingual Game Desingn Documents | 20 minutes ago | 2025-02-17 20:55:43 |
+| Add initial Unreal project using Top-Down template | 28 hours ago | 2025-02-17 20:55:43 |
 <!-- END_RECENTLY_WORKED_ON -->
 
 ---
