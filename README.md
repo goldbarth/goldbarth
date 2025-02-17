@@ -14,7 +14,7 @@
 <p align="center">I'm <b>Felix Wahl</b>, a passionate game programmer specializing in <b>engine tools, performance optimization, and graphics programming</b>. My main focus is <b>C++ & Unreal Engine</b>, but I also work with <b>C#, Unity, and WPF</b>.</p> 
 
 <p align="center">🔭 <b>Currently looking for:</b></p> 
-<p align="center">✅ New challenges as a <b>Unity or Unreal Developer / Tools Engineer</b></p> 
+<p align="center">✅ New challenges as a <b>Unreal or Unity Developer / Tools Engineer</b></p> 
 <p align="center">✅ Deepening my <b>C++ & Unreal Engine expertise</b></p> 
 <p align="center">✅ Exciting team collaborations</p> 
 
