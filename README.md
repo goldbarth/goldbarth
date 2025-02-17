@@ -47,16 +47,16 @@
 
 ## 💻 Tech Stack  
 🚀 **Languages & Engines:**  
-- [![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#https://en.cppreference.com/)  
-- [![C#](https://custom-icon-badges.demolab.com/badge/C%23-%23239120.svg?logo=cshrp&logoColor=white)](#) [![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff)](#)  
-- [![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-%23313131.svg?logo=unrealengine&logoColor=white)](#) 
-- [![Unity](https://img.shields.io/badge/Unity-%23000000.svg?logo=unity&logoColor=white)](#)  
+- [![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#https://en.cppreference.com)  
+- [![C#](https://custom-icon-badges.demolab.com/badge/C%23-%23239120.svg?logo=cshrp&logoColor=white)](https://learn.microsoft.com) [![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff)](https://dotnet.microsoft.com)  
+- [![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-%23313131.svg?logo=unrealengine&logoColor=white)](https://www.unrealengine.com) 
+- [![Unity](https://img.shields.io/badge/Unity-%23000000.svg?logo=unity&logoColor=white)](https://unity.com)  
 
 🛠 **Development Tools:**  
-- [![Rider](https://img.shields.io/badge/Rider-000?logo=rider&logoColor=fff)](#)
-- [![Visual Studio](https://custom-icon-badges.demolab.com/badge/Visual%20Studio-5C2D91.svg?&logo=visual-studio&logoColor=white)](#)  
-- [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)  
-- [![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)](#)
+- [![Rider](https://img.shields.io/badge/Rider-000?logo=rider&logoColor=fff)](https://www.jetbrains.com/rider)
+- [![Visual Studio](https://custom-icon-badges.demolab.com/badge/Visual%20Studio-5C2D91.svg?&logo=visual-studio&logoColor=white)](https://visualstudio.microsoft.com/)  
+- [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](https://git-scm.com/)
+- [![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)](https://cmake.org/)
 ---
 
 ## 🎯 Core Competencies  
