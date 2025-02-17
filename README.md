@@ -21,11 +21,11 @@ I'm **Felix Wahl**, a passionate game programmer specializing in **engine tools,
 🔗 **[View on GitHub](https://github.com/goldbarth/TheObsidianCodex)**  
 
 <!-- START_RECENTLY_WORKED_ON -->
-## 🔄 Recently Worked On
+**🔄 Recently Worked On**
 
 | Feature | Last Commit Message | Last Updated |
 |---------|----------------------|--------------|
-| Add initial Unreal project using Top-Down template | 4 hours ago |
+| Add initial Unreal project using Top-Down template | 7 hours ago |
 <!-- END_RECENTLY_WORKED_ON -->
 
 ---
