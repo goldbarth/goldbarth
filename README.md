@@ -29,10 +29,10 @@
 <!-- START_RECENTLY_WORKED_ON -->
 ### 🔄 Recently Worked On
 
-| Feature | Last Updated | Workflow Updated |
-|---------|--------------|------------------|
-| Add Multilingual Game Desingn Documents | 4 hours ago | 2025-02-18 00:06:15 |
-| Add initial Unreal project using Top-Down template | 31 hours ago | 2025-02-18 00:06:15 |
+| Feature | Last Commit | Workflow Updated |
+|---------|-------------|------------------|
+| Add Multilingual Game Desingn Documents | 5 hours ago | 2025-02-18 02:46:06 CET |
+| Add initial Unreal project using Top-Down template | 32 hours ago | 2025-02-18 02:46:06 CET |
 <!-- END_RECENTLY_WORKED_ON -->
 
 ---
