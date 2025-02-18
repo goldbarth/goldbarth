@@ -29,10 +29,10 @@
 <!-- START_RECENTLY_WORKED_ON -->
 ### 🔄 Recently Worked On
 
-| Feature | Last Commit | Workflow Updated |
-|---------|-------------|------------------|
-| Add Multilingual Game Desingn Documents | 5 hours ago | 2025-02-18 02:46:06 CET |
-| Add initial Unreal project using Top-Down template | 32 hours ago | 2025-02-18 02:46:06 CET |
+| Feature | Commit Datum | Commit |
+|---------|--------------|--------|
+| Add Multilingual Game Desingn Documents | 2025-02-17 21:36:00  | [7e8a0be](https://github.com/goldbarth/TheObsidianCodex/commit/7e8a0bedb443d670d729ca7a8659be5c3d82c4b0) |
+| Add initial Unreal project using Top-Down template | 2025-02-16 18:17:13  | [6893de4](https://github.com/goldbarth/TheObsidianCodex/commit/6893de4f6f4721b304b45f1fb243f99e6e229d9e) |
 <!-- END_RECENTLY_WORKED_ON -->
 
 ---
