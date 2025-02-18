@@ -31,8 +31,8 @@
 
 | Feature | Commit Date | Commit |
 |---------|--------------|--------|
-| Add Multilingual Game Desingn Documents | 2025-02-17 21:36:00  | [7e8a0be](https://github.com/goldbarth/TheObsidianCodex/commit/7e8a0bedb443d670d729ca7a8659be5c3d82c4b0) |
-| Add initial Unreal project using Top-Down template | 2025-02-16 18:17:13  | [6893de4](https://github.com/goldbarth/TheObsidianCodex/commit/6893de4f6f4721b304b45f1fb243f99e6e229d9e) |
+| Add Multilingual Game Desingn Documents | 2025-02-17 21:36:00 CET | [7e8a0be](https://github.com/goldbarth/TheObsidianCodex/commit/7e8a0bedb443d670d729ca7a8659be5c3d82c4b0) |
+| Add initial Unreal project using Top-Down template | 2025-02-16 18:17:13 CET | [6893de4](https://github.com/goldbarth/TheObsidianCodex/commit/6893de4f6f4721b304b45f1fb243f99e6e229d9e) |
 <!-- END_RECENTLY_WORKED_ON -->
 
 ---
