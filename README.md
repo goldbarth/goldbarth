@@ -66,7 +66,7 @@
 ✔ **Engine & Tools Development**  
 ✔ **Performance Optimization & Debugging**  
 ✔ **Unreal Engine C++ & Blueprint Integration**   
-✔ **3D Graphics & Physics Simulations**   
+✔ **Graphics Programming & Physics Simulations**   
 ✔ **Unity Engine C#**
 
 ---
