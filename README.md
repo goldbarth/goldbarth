@@ -31,6 +31,7 @@
 
 | Feature | Commit Date | Commit |
 |---------|--------------|--------|
+| (debug-tool) add slate debug tool widget, windows, and manager | 2025-02-25 00:29:15 CET | [a1da1c2](https://github.com/goldbarth/TheObsidianCodex/commit/a1da1c2a0ca5a59be3ec678e2e5e9f3559acf2f8) |
 | Implement MainCharacter with enhanced input | 2025-02-20 01:23:46 CET | [40807ce](https://github.com/goldbarth/TheObsidianCodex/commit/40807ce36af050159e10b303b1ad4c8e477aff0e) |
 | Custom log implementation with dynamic color output | 2025-02-20 01:09:55 CET | [c32c8ef](https://github.com/goldbarth/TheObsidianCodex/commit/c32c8efce3e83cff419a99737f86ca1097301daa) |
 | Add Multilingual Game Desingn Documents | 2025-02-17 21:36:00 CET | [7e8a0be](https://github.com/goldbarth/TheObsidianCodex/commit/7e8a0bedb443d670d729ca7a8659be5c3d82c4b0) |
