@@ -69,6 +69,7 @@
 ✔ **Unreal Engine C++ & Blueprint Integration**   
 ✔ **Graphics Programming & Physics Simulations**   
 ✔ **Unity Engine C#**
+✔ **.Net WPF Applications**
 
 ---
 
