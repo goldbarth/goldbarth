@@ -52,14 +52,6 @@ My contributions from my previous position as Lead Developer can be found on my 
 
 ### 🌐 Featured Project
 
-#### **🔷 Blazor Project (Coming Soon)**
-📝 **Description:** Currently in development – a fullstack Blazor application showcasing modern .NET web development.  
-🔗 **Repository coming soon**
-
----
-
-### 🌐 Featured Project
-
 #### **🔷 DevToolbox (Blazor Fullstack)**
 📝 **Description:** A fullstack Blazor application showcasing modern .NET web development.  
 🔗 **[View on GitHub](https://github.com/goldbarth/DevToolbox)**
