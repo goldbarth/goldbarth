@@ -1,0 +1,64 @@
+name: Update README with DevToolbox Features
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Alle 6 Stunden
+  workflow_dispatch:  # Manueller Trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+      - name: Checkout DevToolbox repository
+        uses: actions/checkout@v4
+        with:
+          repository: goldbarth/DevToolbox
+          path: devtoolbox
+          fetch-depth: 100
+
+      - name: Update README with DevToolbox features
+        run: |
+          cd devtoolbox
+          
+          # Hole die letzten 5 feat-Commits
+          COMMITS=$(git log --oneline --grep="^feat" --pretty=format:'| %s | %ad | [%h](https://github.com/goldbarth/DevToolbox/commit/%H) |' --date=format:'%Y-%m-%d %H:%M:%S CET' -n 5)
+          
+          cd ..
+          
+          if [ -z "$COMMITS" ]; then
+            echo "No feat commits found"
+            exit 0
+          fi
+          
+          # Erstelle die Tabelle
+          TABLE="| Feature | Commit Date | Commit |
+|---------|-------------|--------|
+$COMMITS"
+          
+          # Ersetze den Bereich zwischen den Markierungen
+          awk -v table="$TABLE" '
+            /<!-- START_DEVTOOLBOX_RECENTLY_WORKED_ON -->/ {
+              print
+              print table
+              skip = 1
+              next
+            }
+            /<!-- END_DEVTOOLBOX_RECENTLY_WORKED_ON -->/ {
+              skip = 0
+            }
+            !skip { print }
+          ' README.md > README.tmp && mv README.tmp README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff --staged --quiet || git commit -m "docs: update DevToolbox recently worked on section"
+          git push
