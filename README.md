@@ -14,7 +14,7 @@
 
 <h3 align="center">About Me</h3>
 <p align="center">
-<!-- PERSONAL_STATEMENT_PLACEHOLDER: Hier kommt dein persönlicher Satz hin -->
+In pain we grow, in joy we recognize what already is.
 </p>
 <p align="center">
 I'm a .NET developer transitioning from desktop applications to modern web development with Blazor. My background in game development gives me a strong foundation in performance optimization and clean architecture. I'm most passionate about backend development while being comfortable across the full stack. I thrive in collaborative team environments and enjoy knowledge sharing with colleagues.
@@ -56,10 +56,20 @@ My contributions from my previous position as Lead Developer can be found on my 
 📝 **Description:** Currently in development – a fullstack Blazor application showcasing modern .NET web development.  
 🔗 **Repository coming soon**
 
-<!-- 
-Platzhalter für GitHub Actions Integration wie bei TheObsidianCodex:
-START_RECENTLY_WORKED_ON / END_RECENTLY_WORKED_ON 
--->
+---
+
+### 🌐 Featured Project
+
+#### **🔷 DevToolbox (Blazor Fullstack)**
+📝 **Description:** A fullstack Blazor application showcasing modern .NET web development.  
+🔗 **[View on GitHub](https://github.com/goldbarth/DevToolbox)**
+
+<!-- START_DEVTOOLBOX_RECENTLY_WORKED_ON -->
+### 🔄 Recently Worked On
+
+| Feature | Commit Date | Commit |
+|---------|-------------|--------|
+<!-- END_DEVTOOLBOX_RECENTLY_WORKED_ON -->
 
 ---
 
