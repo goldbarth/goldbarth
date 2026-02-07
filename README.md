@@ -52,9 +52,9 @@ My contributions from my previous position as Lead Developer can be found on my 
 
 ### 🌐 Featured Project
 
-#### **🔷 DevToolbox (Blazor Fullstack)**
+#### **🔷 ArcFlow (Blazor Fullstack)**
 📝 **Description:** A fullstack Blazor application showcasing modern .NET web development.  
-🔗 **[View on GitHub](https://github.com/goldbarth/DevToolbox)**
+🔗 **[View on GitHub](https://github.com/goldbarth/ArcFlow)**
 
 <!-- START_DEVTOOLBOX_RECENTLY_WORKED_ON -->
 | Feature | Commit Date | Commit |
