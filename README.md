@@ -59,11 +59,11 @@ My contributions from my previous position as Lead Developer can be found on my 
 <!-- START_ARCFLOW_RECENTLY_WORKED_ON -->
 | Feature | Commit Date | Commit |
 |---------|-------------|--------|
+| feat: implement snapshot-based undo/redo for QueueState with Past/Future stacks and   effect gating | 2026-02-11 12:17:43 CET | [0808b4e](https://github.com/goldbarth/ArcFlow/commit/0808b4eb6b23501ff73390c67b0793956e9fabb4) |
 | feat: implement comprehensive error handling with notification system and YouTube URL validation | 2026-02-10 17:22:29 CET | [538e0d0](https://github.com/goldbarth/ArcFlow/commit/538e0d0e57252ae1760a1902a1abfbb8822f9361) |
 | feat: implement comprehensive error handling and notification system for YouTube Player store | 2026-02-10 16:13:05 CET | [0f665cd](https://github.com/goldbarth/ArcFlow/commit/0f665cdf06e4588c5ce28ddd0400f21872f7cfc4) |
 | feat: refactor YouTube player feature to strict store-driven state management | 2026-02-06 20:19:38 CET | [4da5354](https://github.com/goldbarth/ArcFlow/commit/4da53541ba51775c0d04a728bc6d1bab8679dd6c) |
 | feat: add OnPlayerStateChanged method for handling YouTube player state changes | 2026-02-06 15:02:21 CET | [5511eee](https://github.com/goldbarth/ArcFlow/commit/5511eee15c2db1e7974ff611da61e2050caff35b) |
-| feat: add PlayerState model for YouTubePlayer feature | 2026-02-06 15:01:53 CET | [31af266](https://github.com/goldbarth/ArcFlow/commit/31af2668cd3ee8f2aa35fdc92293986700fe9fae) |
 <!-- END_ARCFLOW_RECENTLY_WORKED_ON -->
 
 ---
