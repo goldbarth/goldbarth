@@ -59,11 +59,11 @@ My contributions from my previous position as Lead Developer can be found on my 
 <!-- START_ARCFLOW_RECENTLY_WORKED_ON -->
 | Feature | Commit Date | Commit |
 |---------|-------------|--------|
+| feat: implement import/export pipeline, persist effect, and dispatch-only        UI components for playlist backup and restore | 2026-02-12 16:32:25 CET | [3fc5d01](https://github.com/goldbarth/ArcFlow/commit/3fc5d01e2137bbd2856a040213f5132f9f4057bf) |
 | feat: implement permutation-based shuffle, repeat modes, and playback history       for queue navigation | 2026-02-11 15:18:22 CET | [4b12f67](https://github.com/goldbarth/ArcFlow/commit/4b12f678fb3359c960d5646c54a55fb4447c7690) |
 | feat: migrate layout to MudLayout, replace NotificationPanel with MudBlazor ISnackbar,     add component test page | 2026-02-11 14:11:22 CET | [56fc446](https://github.com/goldbarth/ArcFlow/commit/56fc446161d530f742ccc79f41caa714444ea990) |
 | feat: implement snapshot-based undo/redo for QueueState with Past/Future stacks and   effect gating | 2026-02-11 12:17:43 CET | [0808b4e](https://github.com/goldbarth/ArcFlow/commit/0808b4eb6b23501ff73390c67b0793956e9fabb4) |
 | feat: implement comprehensive error handling with notification system and YouTube URL validation | 2026-02-10 17:22:29 CET | [538e0d0](https://github.com/goldbarth/ArcFlow/commit/538e0d0e57252ae1760a1902a1abfbb8822f9361) |
-| feat: implement comprehensive error handling and notification system for YouTube Player store | 2026-02-10 16:13:05 CET | [0f665cd](https://github.com/goldbarth/ArcFlow/commit/0f665cdf06e4588c5ce28ddd0400f21872f7cfc4) |
 <!-- END_ARCFLOW_RECENTLY_WORKED_ON -->
 
 ---
