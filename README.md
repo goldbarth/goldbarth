@@ -118,12 +118,13 @@ These projects focus on explicit state modeling, deterministic simulation and cl
 
 A physics-driven N-body gravitational simulation.
 
+• GameMode used as composition root  
+• Explicit CelestialBody registry for state coordination  
+• Interface + component-based debug visualization  
+• Virtual body abstraction for orbit debugging  
+
 • Real mass–velocity–distance interaction (no predefined or scripted orbits)  
 • Fixed time-step integration model  
-• Explicit CelestialBody registry for state coordination  
-• GameMode used as composition root  
-• Virtual body abstraction for orbit debugging  
-• Interface + component-based debug visualization  
 • Documented physical scaling model (AU, mass ratios, velocity calculations)
 
 Extensive technical documentation included.
@@ -139,12 +140,13 @@ Extensive technical documentation included.
 
 A minimal rendering engine capable of loading and displaying OBJ models.
 
-• Assimp-based model import  
-• OpenGL rendering pipeline  
-• Shader-based lighting (ambient / diffuse / specular)  
+• Explicit resource and state handling  
 • Camera system (pan, rotate, zoom)  
 • Wireframe rendering mode  
-• Explicit resource and state handling
+
+• Assimp-based model import  
+• OpenGL rendering pipeline  
+• Shader-based lighting (ambient / diffuse / specular)
 
 Built with GLFW, GLAD and modern OpenGL.
 
