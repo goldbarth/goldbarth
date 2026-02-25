@@ -78,7 +78,7 @@ The goal is not feature quantity, but architectural understanding through hands-
 
 # Selected Engineering Work
 
-## ArcFlow (Blazor – Unidirectional State Architecture)
+## BlazorStore (Blazor – Unidirectional State Architecture)
 
 An experimental Blazor application focused on explicit state management using a reduced Redux-inspired pattern.
 
@@ -101,8 +101,8 @@ The architecture intentionally minimizes implicit component state
 to enforce explicit and traceable application behavior.
 
 <p>
-  <a href="https://github.com/goldbarth/ArcFlow">
-    <img src="https://img.shields.io/badge/View_ArcFlow-181717?logo=github&logoColor=white"/>
+  <a href="https://github.com/goldbarth/BlazorStore">
+    <img src="https://img.shields.io/badge/View_BlazorStore-181717?logo=github&logoColor=white"/>
   </a>
 </p>
 
