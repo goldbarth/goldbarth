@@ -39,7 +39,7 @@ Today, I focus on building maintainable backend systems with clear boundaries, e
 
 ---
 
-# 🏗 Primary Engineering Case
+# Primary Engineering Case
 
 ## ServiceDeskLite – Explicit Architecture & Domain Modeling
 
