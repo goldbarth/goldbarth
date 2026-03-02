@@ -35,7 +35,7 @@ Today, I focus on backend systems that remain understandable and changeable over
 
 ---
 
-# 🏗 Primary Engineering Case
+# Primary Engineering Case
 
 ## ServiceDeskLite – Structured Architecture & Domain Design
 
