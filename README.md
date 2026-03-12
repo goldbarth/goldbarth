@@ -20,8 +20,6 @@
   <img src="https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff"/>
   <img src="https://img.shields.io/badge/ASP.NET%20Core-512BD4?logo=dotnet&logoColor=fff"/>
   <img src="https://img.shields.io/badge/EF%20Core-512BD4?logo=dotnet&logoColor=fff"/>
-  <img src="https://img.shields.io/badge/xUnit-2C3E50"/>
-  <img src="https://img.shields.io/badge/FluentAssertions-2C3E50"/>
 </p>
 
 ---
@@ -48,22 +46,25 @@ Today, I focus on backend systems that remain understandable and changeable over
 
 A deliberately structured .NET 10 backend application built to apply clean layering, explicit domain rules and consistent error handling in a realistic setup.
 
-The focus is not feature breadth, but clear responsibilities and controlled dependencies.
+The goal is not feature breadth, but structural clarity, explicit boundaries, and reviewable design decisions.
 
 ### Architectural Focus
 
-• Strict layered architecture (Domain / Application / Infrastructure / API / Web)  
-• Explicit domain workflow rules  
-• Result-based error handling (no exceptions crossing application boundaries)  
-• RFC 9457 ProblemDetails strategy  
-• Strongly-typed IDs  
-• Deterministic paging & sorting (CreatedAt + Id tie-breaker)  
-• Explicit UnitOfWork commit boundary  
-• EF Core (SQLite) + InMemory provider switch  
-• End-to-end tests with provider matrix
+- Strict layered architecture (Domain / Application / Infrastructure / API / Web)
+- Explicit domain workflow rules
+- Result-based error handling (no exceptions crossing application boundaries)
+- RFC 9457 ProblemDetails strategy
+- Strongly-typed IDs
+- Deterministic paging & sorting (CreatedAt + Id tie-breaker)
+- Explicit UnitOfWork commit boundary
+- EF Core (PostgreSQL) + InMemory provider switch
+- End-to-end tests with provider matrix
 
-Repository:
+• **Repository:**
 https://github.com/goldbarth/ServiceDeskLite
+
+• **Documentation:**
+https://goldbarth.github.io/ServiceDeskLite
 
 ---
 
