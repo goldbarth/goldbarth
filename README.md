@@ -38,13 +38,16 @@ Today, I focus on backend systems that remain understandable and changeable over
 ## ServiceDeskLite – Structured Architecture & Domain Design
 
 <p>
-  <img src="https://img.shields.io/badge/.NET_10_LTS-512BD4?logo=dotnet&logoColor=fff"/>
-  <img src="https://img.shields.io/badge/Blazor-512BD4?logo=dotnet&logoColor=fff"/>
-  <img src="https://img.shields.io/badge/EF_Core-512BD4?logo=dotnet&logoColor=fff"/>
-  <img src="https://img.shields.io/badge/Minimal_API-111111"/>
+  <img src="https://img.shields.io/github/v/release/goldbarth/ServiceDeskLite"/>
+  <a href="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/ci.yml">
+    <img src="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/ci.yml/badge.svg" alt="CI" />
+  </a>
+  <a href="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/docs.yml">
+    <img src="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/docs.yml/badge.svg" alt="Docs" />
+  </a>
 </p>
 
-A deliberately structured .NET 10 backend application built to apply clean layering, explicit domain rules and consistent error handling in a realistic setup.
+A deliberately structured .NET 10 backend application demonstrating clean layering, explicit domain rules and consistent error handling in a realistic setup.
 
 The goal is not feature breadth, but structural clarity, explicit boundaries, and reviewable design decisions.
 
