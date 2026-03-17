@@ -11,7 +11,7 @@
 
 <p align="center">
   Backend-Focused .NET Engineer<br/>
-  Clean Architecture · Explicit Domain Logic · Predictable Systems
+  Clean Architecture · Reliable Processing · Explicit Domain Logic
 </p>
 
 <p align="center">📍 Hamburg, Germany</p>
@@ -20,20 +20,27 @@
   <img src="https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff"/>
   <img src="https://img.shields.io/badge/ASP.NET%20Core-512BD4?logo=dotnet&logoColor=fff"/>
   <img src="https://img.shields.io/badge/EF%20Core-512BD4?logo=dotnet&logoColor=fff"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff"/>
 </p>
 
 ---
 
 ## About
 
-I’m a backend-focused .NET engineer with a strong interest in structured application design and explicit domain logic.
+I'm a backend-focused .NET engineer with a strong interest in structured application design, reliable data processing and explicit domain logic.
 
 My background in game development shaped how I think about system behavior, state consistency and performance.  
 Today, I focus on backend systems that remain understandable and changeable over time — with clear boundaries, explicit error handling and testable business logic.
 
 ---
 
-# Primary Engineering Case
+# Engineering Cases
+
+Two portfolio projects that complement each other:  
+**ServiceDeskLite** demonstrates structured architecture and domain design.  
+**Ingestor** demonstrates backend reliability and failure handling.
+
+---
 
 ## ServiceDeskLite – Structured Architecture & Domain Design
 
@@ -71,28 +78,33 @@ https://goldbarth.github.io/ServiceDeskLite
 
 ---
 
-# Selected Engineering Work
+## Ingestor – Backend Reliability & Failure Handling
 
-## BlazorStore (Blazor – Unidirectional State Architecture)
+<p>
+  <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">
+    <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />
+  </a>
+</p>
 
-An experimental Blazor application exploring explicit and centralized state management using a reduced Redux-inspired pattern.
+A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
 
-The playlist domain serves mainly as a vehicle to exercise architectural patterns — not as a product showcase.
+The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
 
-Core concepts:
+### Technical Focus
 
-• Centralized store with explicit state transitions  
-• Unidirectional data flow  
-• Action → Reducer → State pipeline  
-• Immutable state updates  
-• Snapshot-based undo/redo  
-• Side effects isolated from reducers  
-• Component dispatch-only design
+- Two-process architecture (API Host + Worker Host)
+- Database-backed job orchestration (Outbox pattern)
+- Automatic retries with exponential backoff
+- Dead-letter handling with manual requeue
+- Idempotent file ingestion (content hash + supplier)
+- Explicit status model with strict state transitions
+- Structured error classification (transient vs. permanent)
+- Full audit trail for every job lifecycle event
+- OpenTelemetry tracing and structured logging
+- Integration tests with Testcontainers
 
-The project demonstrates how predictable state handling reduces hidden UI behavior and simplifies debugging.
-
-Repository: 
-https://github.com/goldbarth/BlazorStore
+• **Repository:**
+https://github.com/goldbarth/Ingestor
 
 ---
 
