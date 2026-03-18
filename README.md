@@ -34,11 +34,11 @@ Today, I focus on backend systems that remain understandable and changeable over
 
 ---
 
-# Engineering Cases
+# Featured Projects
 
-Two portfolio projects that complement each other:  
-**ServiceDeskLite** demonstrates structured architecture and domain design.  
-**Ingestor** demonstrates backend reliability and failure handling.
+Two backend projects that highlight complementary engineering concerns:
+**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.
+**Ingestor** focuses on reliability, fault handling and operational resilience.
 
 ---
 
