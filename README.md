@@ -36,8 +36,8 @@ Today, I focus on backend systems that remain understandable and changeable over
 
 # Featured Projects
 
-Two backend projects that highlight complementary engineering concerns:
-**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.
+Two backend projects that highlight complementary engineering concerns:  
+**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.  
 **Ingestor** focuses on reliability, fault handling and operational resilience.
 
 ---
@@ -71,8 +71,7 @@ The goal is not feature breadth, but structural clarity, explicit boundaries, an
 - End-to-end tests with provider matrix
 
 • **Repository:**
-https://github.com/goldbarth/ServiceDeskLite
-
+https://github.com/goldbarth/ServiceDeskLite  
 • **Documentation:**
 https://goldbarth.github.io/ServiceDeskLite
 
