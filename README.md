@@ -37,8 +37,42 @@ Today, I focus on backend systems that remain understandable and changeable over
 # Featured Projects
 
 Two backend projects that highlight complementary engineering concerns:  
-**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.  
-**Ingestor** focuses on reliability, fault handling and operational resilience.
+**Ingestor** focuses on reliability, fault handling and operational resilience.  
+**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.
+
+---
+
+## Ingestor – Backend Reliability & Failure Handling
+
+<p>
+  <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>
+  <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">
+    <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />
+  </a>
+</p>
+
+A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
+
+The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
+
+### Technical Focus
+
+- Two-process architecture (API Host + Worker Host)
+- Database-backed job orchestration (Outbox pattern)
+- Configurable dispatcher abstraction (DB queue or RabbitMQ, config-switch)
+- Message-driven processing via RabbitMQ with dead-letter exchange
+- Automatic retries with exponential backoff
+- Dead-letter handling with manual requeue
+- Idempotent file ingestion (content hash + supplier)
+- Explicit status model with strict state transitions
+- Structured error classification (transient vs. permanent)
+- Batch import with chunk processing and partial success handling
+- Full audit trail for every job lifecycle event
+- OpenTelemetry tracing and structured logging
+- Integration tests with Testcontainers
+
+- **Repository:**
+https://github.com/goldbarth/Ingestor
 
 ---
 
@@ -70,40 +104,10 @@ The goal is not feature breadth, but structural clarity, explicit boundaries, an
 - EF Core (PostgreSQL) + InMemory provider switch
 - End-to-end tests with provider matrix
 
-• **Repository:**
+- **Repository:**
 https://github.com/goldbarth/ServiceDeskLite  
-• **Documentation:**
+- **Documentation:**
 https://goldbarth.github.io/ServiceDeskLite
-
----
-
-## Ingestor – Backend Reliability & Failure Handling
-
-<p>
-  <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">
-    <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />
-  </a>
-</p>
-
-A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
-
-The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
-
-### Technical Focus
-
-- Two-process architecture (API Host + Worker Host)
-- Database-backed job orchestration (Outbox pattern)
-- Automatic retries with exponential backoff
-- Dead-letter handling with manual requeue
-- Idempotent file ingestion (content hash + supplier)
-- Explicit status model with strict state transitions
-- Structured error classification (transient vs. permanent)
-- Full audit trail for every job lifecycle event
-- OpenTelemetry tracing and structured logging
-- Integration tests with Testcontainers
-
-• **Repository:**
-https://github.com/goldbarth/Ingestor
 
 ---
 
@@ -118,10 +122,10 @@ explicit state handling, clear ownership and predictable behavior.
 
 A physics-driven N-body simulation with fixed time-step integration.
 
-• GameMode as composition root  
-• Explicit CelestialBody registry  
-• Separation between simulation logic and visualization  
-• Real mass–velocity–distance interaction
+- GameMode as composition root  
+- Explicit CelestialBody registry  
+- Separation between simulation logic and visualization  
+- Real mass–velocity–distance interaction
 
 Repository:
 https://github.com/goldbarth/SolarSystem
@@ -132,9 +136,9 @@ https://github.com/goldbarth/SolarSystem
 
 A minimal rendering engine capable of loading and displaying OBJ models.
 
-• Explicit resource and state handling  
-• Camera system (pan, rotate, zoom)  
-• Shader-based lighting
+- Explicit resource and state handling  
+- Camera system (pan, rotate, zoom)  
+- Shader-based lighting
 
 Repository:
 https://github.com/goldbarth/3DModelViewer
@@ -145,10 +149,10 @@ https://github.com/goldbarth/3DModelViewer
 
 I value clarity, ownership and deliberate system design.
 
-• Boundaries are intentional  
-• Domain logic is visible  
-• Trade-offs are discussed  
-• Quality is a shared responsibility
+- Boundaries are intentional  
+- Domain logic is visible  
+- Trade-offs are discussed  
+- Quality is a shared responsibility
 
 ---
 
