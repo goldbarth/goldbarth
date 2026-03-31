@@ -42,18 +42,19 @@ Two backend projects that highlight complementary engineering concerns:
 
 ---
 
-## Ingestor – Backend Reliability & Failure Handling
+## Ingestor – Backend Reliability, Web UI & Azure Deployment
 
-<p>
-  <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>
-  <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">
-    <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />
-  </a>
-</p>
+  <p>                                                                                                                                           
+    <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>                                                                     
+    <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">                                                                   
+      <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />                                           
+    </a>                                                                                                                                        
+  </p>                                                                                                                                          
 
 A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
 
 The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
+Extended with a Blazor Server web UI and deployed to Azure Container Apps.
 
 ### Technical Focus
 
@@ -70,8 +71,10 @@ The goal is not domain complexity, but technical reliability — retry logic, de
 - Full audit trail for every job lifecycle event
 - OpenTelemetry tracing and structured logging
 - Integration tests with Testcontainers
+- Blazor Server web UI (Dashboard, Imports, Dead Letters)
+- Deployed to Azure Container Apps with Azure Blob Storage for key persistence
 
-- **Repository:**
+**Repository:**
 https://github.com/goldbarth/Ingestor
 
 ---
@@ -104,9 +107,9 @@ The goal is not feature breadth, but structural clarity, explicit boundaries, an
 - EF Core (PostgreSQL) + InMemory provider switch
 - End-to-end tests with provider matrix
 
-- **Repository:**
+**Repository:** 
 https://github.com/goldbarth/ServiceDeskLite  
-- **Documentation:**
+**Documentation:**
 https://goldbarth.github.io/ServiceDeskLite
 
 ---
