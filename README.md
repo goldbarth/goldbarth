@@ -42,19 +42,22 @@ Two backend projects that highlight complementary engineering concerns:
 
 ---
 
-## Ingestor – Backend Reliability, Web UI & Azure Deployment
+## Ingestor – Backend Reliability & Automated Azure Deployment
 
-  <p>                                                                                                                                           
-    <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>                                                                     
-    <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">                                                                   
-      <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />                                           
-    </a>                                                                                                                                        
-  </p>                                                                                                                                          
+  <p>
+    <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>
+    <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">
+      <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />
+    </a>
+    <a href="https://github.com/goldbarth/Ingestor/actions/workflows/cd.yml">
+      <img src="https://github.com/goldbarth/Ingestor/actions/workflows/cd.yml/badge.svg" alt="CD" />
+    </a>
+  </p>
 
 A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
 
 The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
-Extended with a Blazor Server web UI and deployed to Azure Container Apps.
+Extended with a Blazor Server web UI and deployed to Azure Container Apps via an automated CI/CD pipeline.
 
 ### Technical Focus
 
@@ -73,6 +76,8 @@ Extended with a Blazor Server web UI and deployed to Azure Container Apps.
 - Integration tests with Testcontainers
 - Blazor Server web UI (Dashboard, Imports, Dead Letters)
 - Deployed to Azure Container Apps with Azure Blob Storage for key persistence
+- Automated CD pipeline: GitHub Actions builds, pushes to Azure Container Registry, and deploys on every merge to main
+- Passwordless Azure authentication via OIDC (Workload Identity Federation)
 
 **Repository:**
 https://github.com/goldbarth/Ingestor
