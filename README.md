@@ -27,10 +27,9 @@
 
 ## About
 
-I'm a backend-focused .NET engineer with a strong interest in structured application design, reliable data processing and explicit domain logic.
+I'm a backend-focused .NET engineer who came into software through game development.
 
-My background in game development shaped how I think about system behavior, state consistency and performance.  
-Today, I focus on backend systems that remain understandable and changeable over time — with clear boundaries, explicit error handling and testable business logic.
+Studying game programming taught me to care about state consistency, explicit system behavior, and performance under constraints. Those concerns turned out to matter just as much in backend systems. After two years of professional .NET work, growing from junior to mid-level with ownership of three projects, I now focus on systems that stay understandable and changeable over time. Based in Hamburg, open to hybrid roles.
 
 ---
 
@@ -150,17 +149,6 @@ A minimal rendering engine capable of loading and displaying OBJ models.
 
 Repository:
 https://github.com/goldbarth/3DModelViewer
-
----
-
-## Working Approach
-
-I value clarity, ownership and deliberate system design.
-
-- Boundaries are intentional  
-- Domain logic is visible  
-- Trade-offs are discussed  
-- Quality is a shared responsibility
 
 ---
 
