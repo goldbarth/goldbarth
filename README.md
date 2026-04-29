@@ -41,7 +41,7 @@ Two backend projects that highlight complementary engineering concerns:
 
 ---
 
-## Ingestor – Backend Reliability & Automated Azure Deployment
+## Ingestor – Backend Reliability & Automated Fly.io Deployment
 
   <p>
     <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>
@@ -56,7 +56,7 @@ Two backend projects that highlight complementary engineering concerns:
 A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
 
 The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
-Extended with a Blazor Server web UI and deployed to Azure Container Apps via an automated CI/CD pipeline.
+Extended with a Blazor Server web UI and deployed to Fly.io via an automated CI/CD pipeline.
 
 ### Technical Focus
 
@@ -74,9 +74,9 @@ Extended with a Blazor Server web UI and deployed to Azure Container Apps via an
 - OpenTelemetry tracing and structured logging
 - Integration tests with Testcontainers
 - Blazor Server web UI (Dashboard, Imports, Dead Letters)
-- Deployed to Azure Container Apps with Azure Blob Storage for key persistence
-- Automated CD pipeline: GitHub Actions builds, pushes to Azure Container Registry, and deploys on every merge to main
-- Passwordless Azure authentication via OIDC (Workload Identity Federation)
+- Deployed to Fly.io with a persistent volume for Data Protection key storage
+- Automated CD pipeline: GitHub Actions builds remotely on Fly.io and deploys all three apps on every merge to main
+- API token-based authentication via FLY_API_TOKEN (no external container registry required)
 
 **Repository:**
 https://github.com/goldbarth/Ingestor
