@@ -2,6 +2,9 @@
   <a href="https://www.linkedin.com/in/felix-wahl-6763791b9/">
     <img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff" align="absmiddle" alt="LinkedIn Badge">
   </a>
+  <a href="https://www.goldbarth.dev/">
+    <img src="https://custom-icon-badges.demolab.com/badge/Blog-222222?logo=globe&logoColor=fff" align="absmiddle" alt="Blog Badge">
+  </a>
   <a href="mailto:felix.wahl@live.de">
     <img src="https://custom-icon-badges.demolab.com/badge/Email-333333?logo=mail&logoColor=fff" align="absmiddle" alt="Email Badge">
   </a>
