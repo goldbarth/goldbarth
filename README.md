@@ -30,10 +30,9 @@
 
 ## About
 
-I'm a backend-focused .NET engineer with a strong interest in structured application design, reliable data processing and explicit domain logic.
+I'm a backend-focused .NET engineer who came into software through game development.
 
-My background in game development shaped how I think about system behavior, state consistency and performance.  
-Today, I focus on backend systems that remain understandable and changeable over time — with clear boundaries, explicit error handling and testable business logic.
+Studying game programming taught me to care about state consistency, explicit system behavior, and performance under constraints. Those concerns turned out to matter just as much in backend systems. After two years of professional .NET work, growing from junior to mid-level with ownership of three projects, I now focus on systems that stay understandable and changeable over time. Based in Hamburg, open to hybrid roles.
 
 ---
 
@@ -45,7 +44,7 @@ Two backend projects that highlight complementary engineering concerns:
 
 ---
 
-## Ingestor – Backend Reliability & Automated Azure Deployment
+## Ingestor – Backend Reliability & Automated Fly.io Deployment
 
   <p>
     <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>
@@ -60,7 +59,7 @@ Two backend projects that highlight complementary engineering concerns:
 A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
 
 The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
-Extended with a Blazor Server web UI and deployed to Azure Container Apps via an automated CI/CD pipeline.
+Extended with a Blazor Server web UI and deployed to Fly.io via an automated CI/CD pipeline.
 
 ### Technical Focus
 
@@ -78,9 +77,9 @@ Extended with a Blazor Server web UI and deployed to Azure Container Apps via an
 - OpenTelemetry tracing and structured logging
 - Integration tests with Testcontainers
 - Blazor Server web UI (Dashboard, Imports, Dead Letters)
-- Deployed to Azure Container Apps with Azure Blob Storage for key persistence
-- Automated CD pipeline: GitHub Actions builds, pushes to Azure Container Registry, and deploys on every merge to main
-- Passwordless Azure authentication via OIDC (Workload Identity Federation)
+- Deployed to Fly.io with a persistent volume for Data Protection key storage
+- Automated CD pipeline: GitHub Actions builds remotely on Fly.io and deploys all three apps on every merge to main
+- API token-based authentication via FLY_API_TOKEN (no external container registry required)
 
 **Repository:**
 https://github.com/goldbarth/Ingestor
@@ -153,17 +152,6 @@ A minimal rendering engine capable of loading and displaying OBJ models.
 
 Repository:
 https://github.com/goldbarth/3DModelViewer
-
----
-
-## Working Approach
-
-I value clarity, ownership and deliberate system design.
-
-- Boundaries are intentional  
-- Domain logic is visible  
-- Trade-offs are discussed  
-- Quality is a shared responsibility
 
 ---
 
