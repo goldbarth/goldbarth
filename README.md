@@ -5,7 +5,7 @@
   <a href="https://www.goldbarth.dev/">
     <img src="https://custom-icon-badges.demolab.com/badge/Blog-222222?logo=globe&logoColor=fff" align="absmiddle" alt="Blog Badge">
   </a>
-  <a href="mailto:felix.wahl@live.de">
+  <a href="mailto:hello@goldbarth.dev">
     <img src="https://custom-icon-badges.demolab.com/badge/Email-333333?logo=mail&logoColor=fff" align="absmiddle" alt="Email Badge">
   </a>
 </div>
