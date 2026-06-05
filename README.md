@@ -38,28 +38,61 @@ Studying game programming taught me to care about state consistency, explicit sy
 
 # Featured Projects
 
-Two backend projects that highlight complementary engineering concerns:  
+Three backend projects that highlight complementary engineering concerns:  
 **Ingestor** focuses on reliability, fault handling and operational resilience.  
-**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.
+**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.  
+**MetricGate** focuses on distributed rate limiting, multi-tenant hierarchy and low-latency enforcement.
 
 ---
 
-## Ingestor – Backend Reliability & Automated Fly.io Deployment
+## MetricGate – Multi-Tenant Rate Limiting & Distributed Microservices
+
+<p>
+  <img src="https://img.shields.io/github/v/release/goldbarth/MetricGate"/>
+  <a href="https://github.com/goldbarth/MetricGate/actions/workflows/ci.yml">
+    <img src="https://github.com/goldbarth/MetricGate/actions/workflows/ci.yml/badge.svg" alt="CI" />
+  </a>
+  <a href="https://dev.azure.com/goldbarth/MetricGate/_build/latest?definitionId=1">
+    <img src="https://dev.azure.com/goldbarth/MetricGate/_apis/build/status%2Fgoldbarth.MetricGate" alt="Azure Pipelines" />
+  </a>
+</p>
+
+A tenant-aware quota and rate-limiting backend for SaaS APIs. Three independently deployable .NET 10 services enforce plan limits in real time, persist usage events for billing and audit, and support multi-level tenant hierarchies (root, reseller, customer).
+
+The goal is not feature breadth, but distributed correctness — consistent enforcement under concurrent load, cache coherence across a tenant hierarchy, and a hot path with measured p95 latency of 109 µs.
+
+### Technical Focus
+
+- Three-service architecture (Plans / Enforcement / Usage) with strict per-service database ownership
+- Sub-10 ms enforcement API: fixed-window quotas + token bucket rate limits via atomic Redis Lua scripts
+- Multi-level tenant hierarchy with plan inheritance and constraint validation across the tree
+- Tag-based cache cascade invalidation — a single hierarchy change evicts plan resolutions, counters and auth decisions across an entire sub-tree
+- Event-driven usage persistence via Kafka (Redpanda) with idempotent ingest and dedup window
+- Resource-based authorization: custom `IAuthorizationHandler` resolves tenant subtree ownership at request time
+- OIDC authentication (Keycloak) for admin surfaces; API-key authentication on the enforcement hot path
+- Service-to-service auth on cache-miss path (Enforcement → Plans) via internal JWT
+- Clean Architecture per service (Domain / Application / Infrastructure / API) — no mediator, application services injected directly
+- BenchmarkDotNet hot-path benchmarks: p95 cache hit 109 µs, per-request at 50 concurrent 4 µs
+- Integration tests with Testcontainers
+
+**Repository:**
+https://github.com/goldbarth/MetricGate
+
+---
+
+## Ingestor – Backend Reliability & Resilient Processing
 
   <p>
     <img src="https://img.shields.io/github/v/release/goldbarth/Ingestor"/>
     <a href="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml">
       <img src="https://github.com/goldbarth/Ingestor/actions/workflows/ci.yml/badge.svg" alt="CI" />
     </a>
-    <a href="https://github.com/goldbarth/Ingestor/actions/workflows/cd.yml">
-      <img src="https://github.com/goldbarth/Ingestor/actions/workflows/cd.yml/badge.svg" alt="CD" />
-    </a>
   </p>
 
 A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
 
 The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
-Extended with a Blazor Server web UI and deployed to Fly.io via an automated CI/CD pipeline.
+Extended with a Blazor Server web UI.
 
 ### Technical Focus
 
@@ -77,9 +110,6 @@ Extended with a Blazor Server web UI and deployed to Fly.io via an automated CI/
 - OpenTelemetry tracing and structured logging
 - Integration tests with Testcontainers
 - Blazor Server web UI (Dashboard, Imports, Dead Letters)
-- Deployed to Fly.io with a persistent volume for Data Protection key storage
-- Automated CD pipeline: GitHub Actions builds remotely on Fly.io and deploys all three apps on every merge to main
-- API token-based authentication via FLY_API_TOKEN (no external container registry required)
 
 **Repository:**
 https://github.com/goldbarth/Ingestor
