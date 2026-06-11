@@ -38,11 +38,48 @@ Studying game programming taught me to care about state consistency, explicit sy
 
 # Featured Projects
 
-Three backend projects that highlight complementary engineering concerns:  
+Four backend projects that highlight complementary engineering concerns:  
+**port-tidewatch** focuses on water-level ingestion and storm-surge alerting for port infrastructure.  
 **Ingestor** focuses on reliability, fault handling and operational resilience.  
 **ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.  
 **MetricGate** focuses on distributed rate limiting, multi-tenant hierarchy and low-latency enforcement.
 
+---
+
+## port-tidewatch – Water-Level Ingestion & Storm-Surge Alerting
+
+<p>
+<img src="https://img.shields.io/github/v/release/goldbarth/port-tidewatch"/>
+<a href="https://github.com/goldbarth/port-tidewatch/actions/workflows/ci.yml">
+    <img src="https://github.com/goldbarth/port-tidewatch/actions/workflows/ci.yml/badge.svg" alt="CI" />
+</a>
+</p>
+<p>
+  <img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white"/>
+  <img src="https://img.shields.io/badge/RabbitMQ-FF6600?logo=rabbitmq&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white"/>
+</p>
+
+A focused ingestion service for port water-level telemetry, with threshold-based storm-surge alerting and a read-only monitoring dashboard. The domain is modelled on the Hamburg storm-surge warning service (WADI): a warning is raised when an expected surge peak can exceed 4.50 m above sea level (NHN) / 2.40 m above mean high water (MThw).
+
+The goal is not feature breadth, but a reliable, observable ingestion pipeline end to end — one domain, one ingestion path, no write operations from the UI.
+
+### Technical Focus
+
+- Three-component architecture: simulator (.NET) → ingestion service (.NET) → read-only Angular dashboard
+- Message-driven ingestion via RabbitMQ with a dead-letter path for poison messages
+- Staged WADI threshold evaluation, emitting per-gauge alert state (normal / warning)
+- Read-only dashboard: current levels, per-gauge alert status, recent-history trend
+- OpenTelemetry observability across the pipeline
+- Integration tests with Testcontainers
+- Architecture decisions recorded as ADRs (threshold placement, surge-evaluator algorithm, deploy target)
+- Kubernetes + Argo CD (GitOps) deployment; Azure Container Apps baseline
+
+**Repository:**
+https://github.com/goldbarth/port-tidewatch  
+**Blog(German):**
+https://www.goldbarth.dev/projects/port-tidewatch
 ---
 
 ## MetricGate – Multi-Tenant Rate Limiting & Distributed Microservices
