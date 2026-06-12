@@ -61,7 +61,7 @@ Four backend projects that highlight complementary engineering concerns:
   <img src="https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white"/>
 </p>
 
-A focused ingestion service for port water-level telemetry, with threshold-based storm-surge alerting and a read-only monitoring dashboard. The domain is modelled on the Hamburg storm-surge warning service (WADI): a warning is raised when an expected surge peak can exceed 4.50 m above sea level (NHN) / 2.40 m above mean high water (MThw).
+A focused ingestion service for port water-level telemetry, with threshold-based storm-surge alerting and a read-only monitoring dashboard. The domain is modelled on the Hamburg storm-surge warning service (WADI): a warning is raised when an expected surge peak can exceed 4.50 m above sea level (NHN) / 2.40 m above mean high water (MThw), escalating to severe at 5.50 m NHN (BSH *sehr schwere Sturmflut*).
 
 The goal is not feature breadth, but a reliable, observable ingestion pipeline end to end — one domain, one ingestion path, no write operations from the UI.
 
@@ -69,17 +69,19 @@ The goal is not feature breadth, but a reliable, observable ingestion pipeline e
 
 - Three-component architecture: simulator (.NET) → ingestion service (.NET) → read-only Angular dashboard
 - Message-driven ingestion via RabbitMQ with a dead-letter path for poison messages
-- Staged WADI threshold evaluation, emitting per-gauge alert state (normal / warning)
+- Staged WADI threshold evaluation, emitting per-gauge alert state (normal / warning / severe)
 - Read-only dashboard: current levels, per-gauge alert status, recent-history trend
 - OpenTelemetry observability across the pipeline
 - Integration tests with Testcontainers
-- Architecture decisions recorded as ADRs (threshold placement, surge-evaluator algorithm, deploy target)
+- Architecture decisions recorded as four ADRs (threshold placement, dashboard state, deploy target, surge-evaluator algorithm)
 - Kubernetes + Argo CD (GitOps) deployment; Azure Container Apps baseline
 
 **Repository:**
 https://github.com/goldbarth/port-tidewatch  
-**Blog(German):**
-https://www.goldbarth.dev/projects/port-tidewatch
+**Blog (German):**
+https://www.goldbarth.dev/projects/port-tidewatch  
+**Surge-evaluator decision (German):**
+https://www.goldbarth.dev/decisions/surge-evaluator-decisions
 
 ---
 
