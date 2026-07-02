@@ -40,9 +40,9 @@ Studying game programming taught me to care about state consistency, explicit sy
 
 Four backend projects that highlight complementary engineering concerns:  
 **port-tidewatch** focuses on water-level ingestion and storm-surge alerting for port infrastructure.  
-**Ingestor** focuses on reliability, fault handling and operational resilience.  
-**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.  
 **MetricGate** focuses on distributed rate limiting, multi-tenant hierarchy and low-latency enforcement.
+**Ingestor** focuses on reliability, fault handling and operational resilience.  
+**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.
 
 ---
 
