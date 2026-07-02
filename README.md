@@ -39,10 +39,60 @@ Studying game programming taught me to care about state consistency, explicit sy
 # Featured Projects
 
 Four backend projects that highlight complementary engineering concerns:  
+**ServiceDeskLite** focuses on architecture and domain boundaries — and ships an LLM intake assistant (tool calling, SSE streaming) inside them.  
 **port-tidewatch** focuses on water-level ingestion and storm-surge alerting for port infrastructure.  
-**MetricGate** focuses on distributed rate limiting, multi-tenant hierarchy and low-latency enforcement.
-**Ingestor** focuses on reliability, fault handling and operational resilience.  
-**ServiceDeskLite** focuses on architecture, domain boundaries and design clarity.
+**MetricGate** focuses on distributed rate limiting, multi-tenant hierarchy and low-latency enforcement.  
+**Ingestor** focuses on reliability, fault handling and operational resilience.
+
+---
+
+## ServiceDeskLite – AI Ticket Intake on a Clean Architecture
+
+<p>
+  <img src="https://img.shields.io/github/v/release/goldbarth/ServiceDeskLite"/>
+  <a href="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/ci.yml">
+    <img src="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/ci.yml/badge.svg" alt="CI" />
+  </a>
+  <a href="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/docs.yml">
+    <img src="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/docs.yml/badge.svg" alt="Docs" />
+  </a>
+</p>
+<p>
+  <img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Anthropic%20API-191919?logo=anthropic&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Blazor-512BD4?logo=blazor&logoColor=white"/>
+</p>
+
+A deliberately structured .NET 10 backend with a shipped LLM feature: users describe an issue in free text, a Claude model decides via tool calling whether to create or update a ticket, and the response streams token-by-token to the browser (SSE). The assistant lives as an edge adapter — the model acts on the system exclusively through the same command handlers as the REST API, so validation, audit trail and outbox apply to AI-created tickets unchanged.
+
+The goal is not feature breadth, but structural clarity, explicit boundaries, and reviewable design decisions — with the LLM integration as their latest stress test.
+
+### AI / LLM Focus
+
+- Tool calling against the Anthropic Messages API: `create_ticket` / `update_ticket` execute through existing command handlers — no special path into the domain
+- Token streaming via SSE; text deltas and partial tool-call JSON handled in a single pass over the stream
+- Tool output treated as untrusted input: parsed and guarded before touching the domain; rejected inputs return as error `tool_result`s so the model self-corrects in a bounded loop
+- Stateless chat with injected date/timezone so relative deadlines ("by Friday morning") resolve correctly
+- Domain and Application compile without any Anthropic reference (ADR 0023)
+
+### Architectural Focus
+
+- Strict layered architecture (Domain / Application / Infrastructure / API / Web)
+- Explicit domain workflow rules
+- Result-based error handling (no exceptions crossing application boundaries)
+- RFC 9457 ProblemDetails strategy
+- Strongly-typed IDs
+- Explicit UnitOfWork commit boundary
+- EF Core (PostgreSQL) + InMemory provider switch
+- End-to-end tests with provider matrix
+
+**Repository:** 
+https://github.com/goldbarth/ServiceDeskLite  
+**Documentation:**
+https://goldbarth.github.io/ServiceDeskLite  
+**Edge-adapter decision (German):**
+https://www.goldbarth.dev/decisions/ai-assistant-edge-adapter
 
 ---
 
@@ -153,41 +203,6 @@ Extended with a Blazor Server web UI.
 
 **Repository:**
 https://github.com/goldbarth/Ingestor
-
----
-
-## ServiceDeskLite – Structured Architecture & Domain Design
-
-<p>
-  <img src="https://img.shields.io/github/v/release/goldbarth/ServiceDeskLite"/>
-  <a href="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/ci.yml">
-    <img src="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/ci.yml/badge.svg" alt="CI" />
-  </a>
-  <a href="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/docs.yml">
-    <img src="https://github.com/goldbarth/ServiceDeskLite/actions/workflows/docs.yml/badge.svg" alt="Docs" />
-  </a>
-</p>
-
-A deliberately structured .NET 10 backend application demonstrating clean layering, explicit domain rules and consistent error handling in a realistic setup.
-
-The goal is not feature breadth, but structural clarity, explicit boundaries, and reviewable design decisions.
-
-### Architectural Focus
-
-- Strict layered architecture (Domain / Application / Infrastructure / API / Web)
-- Explicit domain workflow rules
-- Result-based error handling (no exceptions crossing application boundaries)
-- RFC 9457 ProblemDetails strategy
-- Strongly-typed IDs
-- Deterministic paging & sorting (CreatedAt + Id tie-breaker)
-- Explicit UnitOfWork commit boundary
-- EF Core (PostgreSQL) + InMemory provider switch
-- End-to-end tests with provider matrix
-
-**Repository:** 
-https://github.com/goldbarth/ServiceDeskLite  
-**Documentation:**
-https://goldbarth.github.io/ServiceDeskLite
 
 ---
 
