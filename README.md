@@ -91,6 +91,8 @@ The goal is not feature breadth, but structural clarity, explicit boundaries, an
 https://github.com/goldbarth/ServiceDeskLite  
 **Documentation:**
 https://goldbarth.github.io/ServiceDeskLite  
+**Blog (German):**
+https://www.goldbarth.dev/projects/service-desk-lite  
 **Edge-adapter decision (German):**
 https://www.goldbarth.dev/decisions/ai-assistant-edge-adapter
 
