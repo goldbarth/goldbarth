@@ -60,7 +60,8 @@ Four backend projects that highlight complementary engineering concerns:
 <p>
   <img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white"/>
   <img src="https://img.shields.io/badge/Anthropic%20API-191919?logo=anthropic&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Voyage%20AI-embeddings-191919"/>
+  <img src="https://img.shields.io/badge/PostgreSQL%20%2B%20pgvector-4169E1?logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Blazor-512BD4?logo=blazor&logoColor=white"/>
 </p>
 
@@ -74,6 +75,8 @@ The goal is not feature breadth, but structural clarity, explicit boundaries, an
 - Token streaming via SSE; text deltas and partial tool-call JSON handled in a single pass over the stream
 - Tool output treated as untrusted input: parsed and guarded before touching the domain; rejected inputs return as error `tool_result`s so the model self-corrects in a bounded loop
 - Stateless chat with injected date/timezone so relative deadlines ("by Friday morning") resolve correctly
+- Semantic ticket search (RAG): `find_similar_tickets` retrieves duplicates by meaning, not keywords — Voyage AI embeddings stored in PostgreSQL via pgvector, computed async by a background worker off the write path
+- Model-controlled retrieval: the model decides when to search and gets honest feedback when the tool is unavailable, instead of forced pre-generation retrieval
 - Domain and Application compile without any Anthropic reference (ADR 0023)
 
 ### Architectural Focus
@@ -94,7 +97,9 @@ https://goldbarth.github.io/ServiceDeskLite
 **Blog (German):**
 https://www.goldbarth.dev/projects/service-desk-lite  
 **Edge-adapter decision (German):**
-https://www.goldbarth.dev/decisions/ai-assistant-edge-adapter
+https://www.goldbarth.dev/decisions/ai-assistant-edge-adapter  
+**Semantic ticket search / RAG decision (German):**
+https://www.goldbarth.dev/decisions/semantic-ticket-search-rag
 
 ---
 
