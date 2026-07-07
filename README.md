@@ -65,13 +65,13 @@ Four backend projects that highlight complementary engineering concerns:
   <img src="https://img.shields.io/badge/Blazor-512BD4?logo=blazor&logoColor=white"/>
 </p>
 
-A deliberately structured .NET 10 backend with a shipped LLM feature: users describe an issue in free text, a Claude model decides via tool calling whether to create or update a ticket, and the response streams token-by-token to the browser (SSE). The assistant lives as an edge adapter — the model acts on the system exclusively through the same command handlers as the REST API, so validation, audit trail and outbox apply to AI-created tickets unchanged.
+A deliberately structured .NET 10 backend with a shipped LLM feature: users describe an issue in free text, a Claude model decides via tool calling whether to create, update, search, or route a ticket, and the response streams token-by-token to the browser (SSE). The assistant lives as an edge adapter — the model acts on the system exclusively through the same command handlers as the REST API, so validation, audit trail and outbox apply to AI-created tickets unchanged.
 
 The goal is not feature breadth, but structural clarity, explicit boundaries, and reviewable design decisions — with the LLM integration as their latest stress test.
 
 ### AI / LLM Focus
 
-- Tool calling against the Anthropic Messages API: `create_ticket` / `update_ticket` execute through existing command handlers — no special path into the domain
+- Tool calling against the Anthropic Messages API: create, update, search, change status and assign tickets to roster agents — every tool executes through existing command handlers, no special path into the domain
 - Token streaming via SSE; text deltas and partial tool-call JSON handled in a single pass over the stream
 - Tool output treated as untrusted input: parsed and guarded before touching the domain; rejected inputs return as error `tool_result`s so the model self-corrects in a bounded loop
 - Stateless chat with injected date/timezone so relative deadlines ("by Friday morning") resolve correctly
