@@ -13,8 +13,8 @@
 <h1 align="center">Felix Wahl</h1>
 
 <p align="center">
-  Backend-Focused .NET Engineer<br/>
-  Clean Architecture · Reliable Processing · Explicit Domain Logic
+  .NET Engineer, moving into AI Engineering<br/>
+  Clean Architecture · Reliable Systems · LLM Integration
 </p>
 
 <p align="center">📍 Hamburg, Germany</p>
@@ -30,23 +30,27 @@
 
 ## About
 
-I'm a backend-focused .NET engineer who came into software through game development.
+I came into software through game development, and my interest has kept moving ever since.
 
-Studying game programming taught me to care about state consistency, explicit system behavior, and performance under constraints. Those concerns turned out to matter just as much in backend systems. Since moving into backend .NET professionally, growing from junior to mid-level with ownership of three projects, I now focus on systems that stay understandable and changeable over time. Based in Hamburg, open to hybrid roles.
+Gameplay design first, until I noticed it was not mine. Then engines and systems, which is where the questions got interesting: state consistency, explicit behavior, performance under constraints. Those questions led into backend engineering, where the same concerns show up with different names. Growing from junior to mid-level with ownership of three projects, I learned to care about systems that stay understandable and changeable over time.
+
+Right now that path leads into AI Engineering. Not away from the backend but built on it: an LLM is an unpredictable external service that wants to change your domain state, which turns out to be an architecture problem more than a prompt problem. I have been building agents that reach the domain only through the same command handlers as every other caller, that get fenced in by a guard pipeline rather than trusted, and that hand a decision back to a person when it matters.
+
+The wandering used to look like a lack of focus to me. I have come to see it as how I work: the constant is the curiosity, and it has been the most durable thing I have. Based in Hamburg, open to hybrid roles.
 
 ---
 
 # Featured Projects
 
 Four backend projects that highlight complementary engineering concerns:  
-**ServiceDeskLite** focuses on architecture and domain boundaries — and ships an LLM intake assistant (tool calling, SSE streaming) inside them.  
+**ServiceDeskLite** focuses on architecture and domain boundaries - and ships an autonomous LLM agent (twelve tools, hybrid RAG, guard pipeline) inside them.  
 **port-tidewatch** focuses on water-level ingestion and storm-surge alerting for port infrastructure.  
 **MetricGate** focuses on distributed rate limiting, multi-tenant hierarchy and low-latency enforcement.  
 **Ingestor** focuses on reliability, fault handling and operational resilience.
 
 ---
 
-## ServiceDeskLite – AI Ticket Intake on a Clean Architecture
+## ServiceDeskLite – An Autonomous AI Agent on a Clean Architecture
 
 <p>
   <img src="https://img.shields.io/github/v/release/goldbarth/ServiceDeskLite"/>
@@ -59,24 +63,27 @@ Four backend projects that highlight complementary engineering concerns:
 </p>
 <p>
   <img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Anthropic%20API-191919?logo=anthropic&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Voyage%20AI-embeddings-191919"/>
+  <img src="https://img.shields.io/badge/Claude-tool%20calling-D97757?logo=claude&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Voyage%20AI-embeddings-1a1a1a"/>
   <img src="https://img.shields.io/badge/PostgreSQL%20%2B%20pgvector-4169E1?logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Blazor-512BD4?logo=blazor&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OpenTelemetry-425CC7?logo=opentelemetry&logoColor=white"/>
 </p>
 
-A deliberately structured .NET 10 backend with a shipped LLM feature: users describe an issue in free text, a Claude model decides via tool calling whether to create, update, search, or route a ticket, and the response streams token-by-token to the browser (SSE). The assistant lives as an edge adapter — the model acts on the system exclusively through the same command handlers as the REST API, so validation, audit trail and outbox apply to AI-created tickets unchanged.
+A deliberately structured .NET 10 backend with a shipped LLM feature: users describe an issue in free text, a Claude model decides via tool calling what to do across twelve tools, and the response streams token-by-token to the browser (SSE). Since v1.6.0 the agent also works unprompted - a background worker reviews open tickets on a schedule and refers every high-impact decision to a person. The agent lives as an edge adapter: it acts on the system exclusively through the same command handlers as the REST API, so validation, audit trail and outbox apply to AI-created tickets unchanged.
 
-The goal is not feature breadth, but structural clarity, explicit boundaries, and reviewable design decisions — with the LLM integration as their latest stress test.
+The surface has grown across releases. What has not changed is the structure underneath: explicit boundaries, reviewable design decisions, and every feature reaching the domain through the same handlers. The agent is their hardest stress test, and it is fenced in rather than trusted.
 
 ### AI / LLM Focus
 
-- Tool calling against the Anthropic Messages API: create, update, search, change status and assign tickets to roster agents — every tool executes through existing command handlers, no special path into the domain
-- Token streaming via SSE; text deltas and partial tool-call JSON handled in a single pass over the stream
+- Twelve tools against the Anthropic Messages API: create, update, search, comment, change status, assign, auto-route, ticket and knowledge-base retrieval, grounding check, remember/recall - every tool executes through existing command handlers, no special path into the domain
+- Autonomous ticket worker: the tool-calling loop was extracted from the chat endpoint, so worker and assistant share one loop, one set of tools and one set of guards; a review guard refuses high-impact writes and the model posts its reasoning as a comment for a human to approve (ADR 0037)
+- Agent sandbox: a guard pipeline at the single point where model intent becomes execution - unknown tool names refused, argument size capped, writes budgeted per turn, per-owner rate limits; a refusal returns as an ordinary error result the model can act on (ADR 0035)
+- Hybrid retrieval: semantic (Voyage embeddings in pgvector) and keyword signals fused via Reciprocal Rank Fusion, cross-lingual, computed async by a background worker off the write path (ADR 0030)
+- Knowledge-base RAG with cited sources, plus a deterministic grounding check the model runs against its own draft, so a weak answer is hedged or re-retrieved rather than asserted (ADR 0029, ADR 0031)
 - Tool output treated as untrusted input: parsed and guarded before touching the domain; rejected inputs return as error `tool_result`s so the model self-corrects in a bounded loop
-- Stateless chat with injected date/timezone so relative deadlines ("by Friday morning") resolve correctly
-- Semantic ticket search (RAG): `find_similar_tickets` retrieves duplicates by meaning, not keywords — Voyage AI embeddings stored in PostgreSQL via pgvector, computed async by a background worker off the write path
-- Model-controlled retrieval: the model decides when to search and gets honest feedback when the tool is unavailable, instead of forced pre-generation retrieval
+- Server-side conversation state and long-term memory (pgvector), with date/timezone injected per request so relative deadlines ("by Friday morning") resolve correctly (ADR 0026)
+- Observability: Prometheus metrics and OpenTelemetry traces for tool latency, error rates, token usage and retrieval confidence; an unmeasurable rate reports as unknown, not as zero (ADR 0034, ADR 0036)
+- Offline agent evaluation suite: the real endpoint, loop, guards and tools run against a scripted model, so tool calling, RAG grounding and streaming are pinned in CI without a network call
 - Domain and Application compile without any Anthropic reference (ADR 0023)
 
 ### Architectural Focus
@@ -118,15 +125,16 @@ https://www.goldbarth.dev/decisions/semantic-ticket-search-rag
   <img src="https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white"/>
 </p>
 
-A focused ingestion service for port water-level telemetry, with threshold-based storm-surge alerting and a read-only monitoring dashboard. The domain is modelled on the Hamburg storm-surge warning service (WADI): a warning is raised when an expected surge peak can exceed 4.50 m above sea level (NHN) / 2.40 m above mean high water (MThw), escalating to severe at 5.50 m NHN (BSH *sehr schwere Sturmflut*).
+A focused ingestion service for port water-level telemetry, with threshold-based storm-surge alerting and a read-only monitoring dashboard. Since v1.2.0 it runs on real data: the public WSV/PEGELONLINE feed for the Hamburg Elbe gauges (St. Pauli, Zollenspieker, Over, Bunthaus), with a scripted simulator selectable at startup. The domain is modelled on the Hamburg storm-surge warning service (WADI): a warning is raised when an expected surge peak can exceed 4.50 m above sea level (NHN) / 2.40 m above mean high water (MThw), escalating to severe at 5.50 m NHN (BSH *sehr schwere Sturmflut*).
 
-The goal is not feature breadth, but a reliable, observable ingestion pipeline end to end — one domain, one ingestion path, no write operations from the UI.
+A reliable, observable ingestion pipeline end to end: one domain, one ingestion path, no write operations from the UI.
 
 ### Technical Focus
 
-- Three-component architecture: simulator (.NET) → ingestion service (.NET) → read-only Angular dashboard
+- Three-component architecture: reading source (.NET, live feed or simulator) → ingestion service (.NET) → read-only Angular dashboard
 - Message-driven ingestion via RabbitMQ with a dead-letter path for poison messages
-- Staged WADI threshold evaluation, emitting per-gauge alert state (normal / warning / severe)
+- Staged WADI threshold evaluation with hysteresis and trend awareness, emitting per-gauge alert state (normal / warning / severe)
+- Honest freshness (v1.3.0): liveness is keyed on measurement age and staleness on data arrival, so a fresh poll of a stale gauge no longer reads as live
 - Read-only dashboard: current levels, per-gauge alert status, recent-history trend
 - OpenTelemetry observability across the pipeline
 - Integration tests with Testcontainers
@@ -156,19 +164,19 @@ https://www.goldbarth.dev/decisions/surge-evaluator-decisions
 
 A tenant-aware quota and rate-limiting backend for SaaS APIs. Three independently deployable .NET 10 services enforce plan limits in real time, persist usage events for billing and audit, and support multi-level tenant hierarchies (root, reseller, customer).
 
-The goal is not feature breadth, but distributed correctness — consistent enforcement under concurrent load, cache coherence across a tenant hierarchy, and a hot path with measured p95 latency of 109 µs.
+The focus is distributed correctness: consistent enforcement under concurrent load, cache coherence across a tenant hierarchy, and a hot path with measured p95 latency of 109 µs.
 
 ### Technical Focus
 
 - Three-service architecture (Plans / Enforcement / Usage) with strict per-service database ownership
 - Sub-10 ms enforcement API: fixed-window quotas + token bucket rate limits via atomic Redis Lua scripts
 - Multi-level tenant hierarchy with plan inheritance and constraint validation across the tree
-- Tag-based cache cascade invalidation — a single hierarchy change evicts plan resolutions, counters and auth decisions across an entire sub-tree
+- Tag-based cache cascade invalidation: a single hierarchy change evicts plan resolutions, counters and auth decisions across an entire sub-tree
 - Event-driven usage persistence via Kafka (Redpanda) with idempotent ingest and dedup window
 - Resource-based authorization: custom `IAuthorizationHandler` resolves tenant subtree ownership at request time
 - OIDC authentication (Keycloak) for admin surfaces; API-key authentication on the enforcement hot path
 - Service-to-service auth on cache-miss path (Enforcement → Plans) via internal JWT
-- Clean Architecture per service (Domain / Application / Infrastructure / API) — no mediator, application services injected directly
+- Clean Architecture per service (Domain / Application / Infrastructure / API), no mediator, application services injected directly
 - BenchmarkDotNet hot-path benchmarks: p95 cache hit 109 µs, per-request at 50 concurrent 4 µs
 - Integration tests with Testcontainers
 
@@ -188,7 +196,7 @@ https://github.com/goldbarth/MetricGate
 
 A reliable import system for processing delivery data from multiple suppliers. Built for a fictional furnishing logistics company (Fleetholm Logistics).
 
-The goal is not domain complexity, but technical reliability — retry logic, dead-letter handling, idempotent processing and full audit trails.
+The focus is technical reliability: retry logic, dead-letter handling, idempotent processing and full audit trails.
 Extended with a Blazor Server web UI.
 
 ### Technical Focus
@@ -247,4 +255,13 @@ https://github.com/goldbarth/3DModelViewer
 
 ---
 
-Open to backend-oriented engineering roles in Hamburg.
+<p align="center">
+  Open to hybrid backend and AI engineering roles in Hamburg.<br/>
+  <sub>Currently building LLM agents that stay inside their architectural boundaries.</sub>
+</p>
+
+<p align="center">
+  <a href="https://www.goldbarth.dev/">Blog</a> ·
+  <a href="https://www.linkedin.com/in/felix-wahl-6763791b9/">LinkedIn</a> ·
+  <a href="mailto:hello@goldbarth.dev">hello@goldbarth.dev</a>
+</p>
