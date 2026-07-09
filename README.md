@@ -32,7 +32,7 @@
 
 I'm a backend-focused .NET engineer who came into software through game development.
 
-Studying game programming taught me to care about state consistency, explicit system behavior, and performance under constraints. Those concerns turned out to matter just as much in backend systems. After two years of professional .NET work, growing from junior to mid-level with ownership of three projects, I now focus on systems that stay understandable and changeable over time. Based in Hamburg, open to hybrid roles.
+Studying game programming taught me to care about state consistency, explicit system behavior, and performance under constraints. Those concerns turned out to matter just as much in backend systems. Since moving into backend .NET professionally, growing from junior to mid-level with ownership of three projects, I now focus on systems that stay understandable and changeable over time. Based in Hamburg, open to hybrid roles.
 
 ---
 
