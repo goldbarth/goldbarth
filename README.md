@@ -8,10 +8,7 @@
   <img src="assets/dark/direction.svg" width="100%" alt="Woran ich arbeite, wohin es geht">
 </picture>
 
-<a href="https://github.com/goldbarth/chartula"><picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-light.svg">
-  <img src="assets/dark/chartula.svg" width="100%" alt="chartula - grounded changelog CLI">
-</picture></a>
+<a href="https://github.com/goldbarth/chartula"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-light.svg"><img src="assets/dark/chartula.svg" width="100%" alt="chartula - grounded changelog CLI"></picture></a>
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/label-archive-light.svg">
@@ -28,9 +25,6 @@
   <img src="assets/dark/stack.svg" width="100%" alt="Stack">
 </picture>
 
-<a href="https://www.goldbarth.dev/"><picture>
-  <source media="(prefers-color-scheme: light)" srcset="assets/light/blog-light.svg">
-  <img src="assets/dark/blog.svg" width="100%" alt="Blog - Entscheidungen und ADRs">
-</picture></a>
+<a href="https://www.goldbarth.dev/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/blog-light.svg"><img src="assets/dark/blog.svg" width="100%" alt="Blog - Entscheidungen und ADRs"></picture></a>
 
 <a href="https://www.linkedin.com/in/felix-wahl"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-linkedin-light.svg"><img src="assets/dark/kontakt-linkedin.svg" width="50%" alt="LinkedIn"></picture></a><a href="mailto:hello@goldbarth.dev"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-mail-light.svg"><img src="assets/dark/kontakt-mail.svg" width="50%" alt="hello@goldbarth.dev"></picture></a>
