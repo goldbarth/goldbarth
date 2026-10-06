@@ -27,4 +27,4 @@
 
 <a href="https://www.goldbarth.dev/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/blog-light.svg"><img src="assets/dark/blog.svg" width="100%" alt="Blog - Entscheidungen und ADRs"></picture></a>
 
-<a href="https://www.linkedin.com/in/felix-wahl"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-linkedin-light.svg"><img src="assets/dark/kontakt-linkedin.svg" width="50%" alt="LinkedIn"></picture></a><a href="mailto:hello@goldbarth.dev"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-mail-light.svg"><img src="assets/dark/kontakt-mail.svg" width="50%" alt="hello@goldbarth.dev"></picture></a>
+<a href="https://www.linkedin.com/in/felix-wahl"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-linkedin-light.svg"><img src="assets/dark/kontakt-linkedin.svg" width="50%" alt="LinkedIn"></picture></a><a href="mailto:felix.wahl@goldbarth.dev"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-mail-light.svg"><img src="assets/dark/kontakt-mail.svg" width="50%" alt="felix.wahl@goldbarth.dev"></picture></a>
