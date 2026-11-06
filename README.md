@@ -9,7 +9,7 @@
 </picture>
 
 <a href="https://github.com/goldbarth/chartula"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-light.svg"><img src="assets/dark/chartula.svg" width="100%" alt="01 Chartula - grounded release notes from merged PRs"></picture></a>
-<a href="https://github.com/goldbarth/retrieval-regression-harness"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/rrh-light.svg"><img src="assets/dark/rrh.svg" width="50%" alt="02 retrieval-regression-harness - regression tests for RAG systems"></picture></a><a href="https://github.com/goldbarth/chartula-evals"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-eval-light.svg"><img src="assets/dark/chartula-eval.svg" width="50%" alt="03 chartula-eval - measuring quality and cost of Chartula's release notes"></picture></a>
+<a href="https://github.com/goldbarth/retrieval-regression-harness"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/rrh-light.svg"><img src="assets/dark/rrh.svg" width="50%" alt="02 retrieval-regression-harness - regression tests for RAG systems"></picture></a><a href="https://github.com/goldbarth/chartula-evals"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-evals-light.svg"><img src="assets/dark/chartula-evals.svg" width="50%" alt="03 chartula-evals - measuring quality and cost of Chartula's release notes"></picture></a>
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/label-archive-light.svg">
