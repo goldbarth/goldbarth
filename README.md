@@ -1,14 +1,15 @@
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/light/header-light.svg">
-  <img src="assets/dark/header.svg" width="100%" alt="Felix Wahl - .NET Engineer, moving into AI Engineering">
+  <img src="assets/dark/header.svg" width="100%" alt="Felix Wahl - Software Engineer, Applied AI. LLM integration and evaluation, Hamburg">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/light/direction-light.svg">
-  <img src="assets/dark/direction.svg" width="100%" alt="Woran ich arbeite, wohin es geht">
+  <img src="assets/dark/direction.svg" width="100%" alt="Direction - Understanding systems. Building useful software.">
 </picture>
 
-<a href="https://github.com/goldbarth/chartula"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-light.svg"><img src="assets/dark/chartula.svg" width="100%" alt="chartula - grounded changelog CLI"></picture></a>
+<a href="https://github.com/goldbarth/chartula"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-light.svg"><img src="assets/dark/chartula.svg" width="100%" alt="01 Chartula - grounded release notes from merged PRs"></picture></a>
+<a href="https://github.com/goldbarth/retrieval-regression-harness"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/rrh-light.svg"><img src="assets/dark/rrh.svg" width="50%" alt="02 retrieval-regression-harness - regression tests for RAG systems"></picture></a><a href="https://github.com/goldbarth/chartula-evals"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/chartula-eval-light.svg"><img src="assets/dark/chartula-eval.svg" width="50%" alt="03 chartula-eval - measuring quality and cost of Chartula's release notes"></picture></a>
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/label-archive-light.svg">
@@ -22,9 +23,9 @@
 </picture>
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/light/stack-light.svg">
-  <img src="assets/dark/stack.svg" width="100%" alt="Stack">
+  <img src="assets/dark/stack.svg" width="100%" alt="Stack: Python, C#, .NET, SQL, LLMs, Docker, GitHub Actions">
 </picture>
 
-<a href="https://www.goldbarth.dev/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/blog-light.svg"><img src="assets/dark/blog.svg" width="100%" alt="Blog - Entscheidungen und ADRs"></picture></a>
+<a href="https://www.goldbarth.dev/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/blog-light.svg"><img src="assets/dark/blog.svg" width="100%" alt="Field notes - technical decisions, experiments and open questions"></picture></a>
 
 <a href="https://www.linkedin.com/in/felix-wahl"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-linkedin-light.svg"><img src="assets/dark/kontakt-linkedin.svg" width="50%" alt="LinkedIn"></picture></a><a href="mailto:felix.wahl@goldbarth.dev"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/kontakt-mail-light.svg"><img src="assets/dark/kontakt-mail.svg" width="50%" alt="felix.wahl@goldbarth.dev"></picture></a>
